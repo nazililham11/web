@@ -1,0 +1,38 @@
+[
+    {
+      "title": "Robot SUMOBOT",
+      "tags": ["Arduino"],
+      "year_start": 2019,
+      "content": "Robot yang bertanding di arena untuk menjatuhkan/mengeluarkan lawan dari arena. Robot dibuat dengan Arduino dan dikendalikan menggunakan Joystick yang dimodifikasi dengan arduino dan modul wireless.🏆 Juara 4 dalam event KIROFEST Polman Bandung 2019"
+    },
+    {
+      "title": "ALat Penebangan Hutan Liar",
+      "tags": ["Arduino"],
+      "year_start": 2019,
+      "content": "Dibuat Menggunakan Arduino dengan mendeteksi suara yang menyerupai suara gergaji mesin dengan sensor suara kemudian mengirimkan SMS sebagai notifikasi."
+    },
+    {
+      "title": "Alat Pendeteksi Jarak",
+      "tags": ["Mobile App", "Arduino"],
+      "year_start": 2019,
+      "content": "Dibuat dengan arduino dan mendeteksi jarak mengunakan sensor jarak berbasis cahaya kemudian mengirimkan data jarak pada aplkiasi mobile. Aplikasi dibuat dengan bahasa kotlin dan berkomunikasi dengan alat pendeteksi menggunakan WiFi dan protokol WebSocket."
+    },
+    {
+      "title": "Aplikasi Pencatatan",
+      "tags": ["Mobile App"],
+      "year_start": 2021,
+      "content": "Aplikasi mobile yang dibuat dengan bahasa kotlin dan sqlite sebagai media penyimpanan data"
+    },
+    {
+      "title": "Lampu Jalan Otomatis",
+      "tags": ["Arduino"],
+      "year_start": 2021,
+      "content": "Lampu jalan yang dapat meredupkan / mematikan lampu saat tidak ada kendaraan yang lewat. Dibuat dengan Arduino dan dapat mendeteksi kendaraan yang lewat dengan menggunakan sensor jarak kemudain akan membuat lampu menjadi terang."
+    },
+    {
+      "title": "Pendeteksi Ganguan Detak Jantung",
+      "tags": ["Arduino", "Web App"],
+      "year_start": 2022,
+      "content": "Alat yang mendeteksi detak jantung dan dapat mengidentifikasi apakah detak jantung mengalami ganguan Atrial Fibrilasi."
+    }
+]
