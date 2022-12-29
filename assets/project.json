@@ -6,11 +6,11 @@
       "content": "Display dot matriks yang dibuat karena hobi dan untuk meningkatkan pengalaman dengan project yang sedikit lebih kompleks.",
       "images": [
         "dmd_2.jpg", 
-        "dmd_4.png",
         "dmd_1.jpg", 
-        "dmd_3.png",
         "dmd_5.png",
-        "dmd_6.png"
+        "dmd_4.png",
+        "dmd_6.png",
+        "dmd_3.png"
       ]
     },
     {
@@ -55,8 +55,8 @@
       "repository": "https://github.com/nazililham11/e-Kali_IoT-Web",
       "images": [
         "dam_1.jpg",
-        "dam_2.jpg",
-        "dam_3.jpg"
+        "dam_3.jpg",
+        "dam_2.jpg"
       ]
     },
     {
@@ -90,7 +90,11 @@
       "tags": ["Database", "Mobile App", "Web App"],
       "year": 2019,
       "content": "Aplikasi untuk tugas. Aplikasi yang digunakan untuk proses booking ruang.",
-      "images": []
+      "repository": "https://github.com/nazililham11/bruang-java",
+      "images": [
+        "bruang_1.png",
+        "bruang_2.png"
+      ]
     },
     {
       "title": "Alat Deteksi Penebangan Hutan Liar",
@@ -100,7 +104,7 @@
       "images": []
     },
     {
-      "title": "Alat Pendeteksi Jarak",
+      "title": "Alat Deteksi Jarak",
       "tags": ["Arduino", "Database", "Elektronik", "Mobile App"],
       "year": 2019,
       "content": "Dibuat dengan arduino dan mendeteksi jarak mengunakan sensor jarak berbasis cahaya kemudian mengirimkan data jarak pada aplkiasi mobile. Aplikasi dibuat dengan bahasa kotlin dan berkomunikasi dengan alat pendeteksi menggunakan WiFi dan protokol WebSocket.",
@@ -120,12 +124,11 @@
       "content": "Robot laba-laba berkaki empat dan dapat di kontrol melalui aplikasi",
       "repository": "https://github.com/nazililham11/Quadpod",
       "images": [
-        "quadpod_1.png",
-        "quadpod_2.png",
-        "quadpod_4.jpg",
         "quadpod_5.jpg",
-        "quadpod_3.png",
-        "quadpod_6.png"
+        "quadpod_6.png",
+        "quadpod_4.jpg",
+        "quadpod_1.png",
+        "quadpod_3.png"
       ]
     },
     {
@@ -148,9 +151,9 @@
       "content": "Lampu jalan yang dapat meredupkan/mematikan lampu saat tidak ada kendaraan yang lewat. Dibuat dengan Arduino dan dapat mendeteksi kendaraan yang lewat dengan menggunakan sensor jarak kemudain akan membuat lampu menjadi terang.",
       "repository": "https://github.com/nazililham11/smart_street_lights-arduino",
       "images": [
-        "lampu_jalan_3.jpg",
+        "lampu_jalan_1.jpg",
         "lampu_jalan_2.jpg",
-        "lampu_jalan_1.jpg"
+        "lampu_jalan_3.jpg"
       ]
     },
     {
