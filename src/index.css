@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+
+    span {
+        @apply text-gray-600
+    }
+    button {
+        @apply hover:opacity-80
+    }
+}
