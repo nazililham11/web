@@ -39,6 +39,7 @@
 
 <script>
 import Label from './../components/Label.vue'
+import fetchers from './../utils/fetchers'
 
 export default {
     components: { Label },
@@ -48,12 +49,7 @@ export default {
         }
     },
     async mounted(){
-        // const visitor_url = 'https://api.visitorbadge.io/api/visitors?path=nazililham11.profile'
-        // const resp = await fetch(visitor_url).then(r => r.text())
-        // let visitor = resp.split('<title>visitors:').pop()
-        // visitor = visitor.split('</title>').shift()
-        // this.visitor = parseInt(visitor)
-        // console.log(visitor)
+        this.visitor = await fetchers.visitors()
     }
 }
 
