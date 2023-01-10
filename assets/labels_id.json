@@ -1,0 +1,21 @@
+{
+    "header__profile": "Profil",
+    "header__resume": "Resume",
+    "header__portofolio": "Portofolio",
+    
+    "profile__profile": "Pro#fil#",
+    "profile__github_profile": "Profil Git#Hub#",
+
+    "resume__education": "Pen#didikan#",
+    "resume__work_experience": "Pengalaman #Kerja#",
+
+    "portofolio__portofolio": "Porto#folio#",
+    "portofolio__repo_page": "Halaman Repository",
+
+    "footer__made_with": "Halaman Dibuat Dengan",
+    "footer__visitor": "Pengujung",
+
+
+    "no_image": "No Image"
+
+}

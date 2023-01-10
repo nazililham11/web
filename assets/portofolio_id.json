@@ -1,9 +1,17 @@
 [
     {
+      "title": "Pengunci Pintu Berbasis Pin",
+      "tags": ["Arduino", "Elektronik"],
+      "year": 2016,
+      "content": "Miniatur yang dibuat untuk keperluan apmeran karya sidoarjo 2016.",
+      "hide": true,
+      "images": []
+    },
+    {
       "title": "Display Dot Matrix",
       "tags": ["Arduino", "Elektronik"],
       "year": 2016,
-      "content": "Display dot matriks yang dibuat karena hobi dan untuk meningkatkan pengalaman dengan project yang sedikit lebih kompleks.",
+      "content": "Display dot matriks yang berbasis arduino",
       "images": [
         "dmd_2.jpg", 
         "dmd_1.jpg", 
@@ -18,7 +26,7 @@
       "tags": ["Arduino", "Elektronik"],
       "year": 2016,
       "achievement": "Juara 2 dalam event di SMK Negeri 1 Buduran 2016.",
-      "content": "Robot Line follower yang dibuat untuk keperluan lomba.",
+      "content": "Robot Line follower yaitu robot beroda yang bergerak mengikuti garis.",
       "images": [
         "line_follower_1.jpg",
         "line_follower_2.jpg"
@@ -29,6 +37,7 @@
       "tags": ["Elektronik"],
       "year": 2017,
       "content": "Rangkainan PCB yang dibuat untuk keperluan tugas akhir di SMK.",
+      "hide": true,
       "images": [
         "power_amp_1.png",
         "power_amp_2.png"
@@ -46,6 +55,16 @@
         "jam_digital_2.jpeg"
       ]
     },
+    {
+      "title": "Aplikasi Bimbel Manggis",
+      "tags": ["Database", "Desktop App"],
+      "year": 2018,
+      "content": "Apliaksi Desktop yang digunakan untuk mengerjakan soal/tugas. Studi kasus pusat bimbingan belajar Manggis. Aplikasi dibuat dengan basis WPF C#, server PHP, dan Database MySQL.",
+      "repository": "https://github.com/nazililham11/bimbel-wpf",
+      "hide": true,
+      "images": []
+    },
+    
     {
       "title": "Smart DAM",
       "tags": ["Arduino", "Database", "Elektronik", "Web App"],
@@ -67,16 +86,25 @@
       "content": "Robot yang bertanding di arena untuk menjatuhkan/mengeluarkan lawan dari arena. Robot dibuat dengan Arduino dan dikendalikan menggunakan Joystick yang dimodifikasi dengan arduino dan modul wireless.",
       "images": [
         "sumobot_1.JPG",
-        "sumobot_3.JPG",
         "sumobot_2.JPG",
+        "sumobot_3.JPG",
         "sumobot_4.png"
       ]
+    },
+    {
+      "title": "Aplikasi Bimbel Manggis V2",
+      "tags": ["Database", "Web App"],
+      "year": 2019,
+      "content": "Apliaksi Web yang merupakan pengembangan dari Apliaksi Bimbel Manggis yang berbasis Desktop. Proses remake ke dalam bentuk Web ditujukan untuk membuat aplikasi lebih multiplatform dan lebih mudah dalam pendistribusian / perawatan. Aplikasi dibuat dengan Vue Js, Laravel, dan MySQL.",
+      "hide": true,
+      "repository": "https://github.com/nazililham11/bimbel-laravel",
+      "images": []
     },
     {
       "title": "Wireless Joystick",
       "tags": ["Arduino", "Elektronik"],
       "year": 2019,
-      "content": "Cuustom Wireless Controller dengan arduino dan NRF24L01",
+      "content": "Custom Wireless Controller dengan arduino dan NRF24L01. Controller digunakan untuk pengembangan/mengendalikan robot quadpod, sumobot, dan humanoid",
       "images": [
         "controller_1.jpg",
         "controller_2.jpg",
@@ -89,7 +117,7 @@
       "title": "BRUANG (Aplikasi Booking Ruang)",
       "tags": ["Database", "Mobile App", "Web App"],
       "year": 2019,
-      "content": "Aplikasi untuk tugas. Aplikasi yang digunakan untuk proses booking ruang.",
+      "content": "Aplikasi yang digunakan untuk proses booking ruang. Aplikasi mobile dibuat dengan Java serta server berbasis Laravel dan MySQL",
       "repository": "https://github.com/nazililham11/bruang-java",
       "images": [
         "bruang_1.png",
@@ -101,6 +129,7 @@
       "tags": ["Arduino", "Elektronik"],
       "year": 2019,
       "content": "Dibuat Menggunakan Arduino dengan mendeteksi suara yang menyerupai suara gergaji mesin dengan sensor suara kemudian mengirimkan SMS sebagai notifikasi.",
+      "hide": true,
       "images": []
     },
     {
@@ -121,7 +150,7 @@
       "title": "Robot Quadpod",
       "tags": ["Arduino", "Elektronik", "Web App"],
       "year": 2020,
-      "content": "Robot laba-laba berkaki empat dan dapat di kontrol melalui aplikasi",
+      "content": "Robot laba-laba berkaki empat dan dapat di monitor/kontrol melalui aplikasi",
       "repository": "https://github.com/nazililham11/Quadpod",
       "images": [
         "quadpod_5.jpg",
@@ -135,7 +164,7 @@
       "title": "Hunger Monster",
       "tags": ["Games", "Web App"],
       "year": 2020,
-      "content": "Game untuk tugas kuliah",
+      "content": "Game 2D bergenre teka-teki yang menceritakan pelarian makhluk seperti monster subjek uji coba dari laboratorium.",
       "repository": "https://github.com/nazililham11/hunger_monster-construct2",
       "images": [
         "hunger_monster_1.png",
@@ -148,13 +177,22 @@
       "title": "Lampu Jalan Otomatis",
       "tags": ["Arduino", "Elektronik"],
       "year": 2021,
-      "content": "Lampu jalan yang dapat meredupkan/mematikan lampu saat tidak ada kendaraan yang lewat. Dibuat dengan Arduino dan dapat mendeteksi kendaraan yang lewat dengan menggunakan sensor jarak kemudain akan membuat lampu menjadi terang.",
+      "content": "Lampu jalan yang dapat meredupkan/mematikan lampu saat tidak ada kendaraan yang lewat.",
       "repository": "https://github.com/nazililham11/smart_street_lights-arduino",
       "images": [
         "lampu_jalan_1.jpg",
         "lampu_jalan_2.jpg",
         "lampu_jalan_3.jpg"
       ]
+    },
+    {
+      "title": "Aplikasi Pencatatan",
+      "tags": ["Database", "Mobile App"],
+      "year": 2021,
+      "content": "Aplikasi Pencatatan yang berfungsi mencatat data spesifik berupa data tiang listrik. Aplikasi dibuat menggunakan Kotlin dan SQLite.",
+      "repository": "https://github.com/nazililham11/geo_form-android",
+      "hide": true,
+      "images": []
     },
     {
       "title": "Deteksi Produk",
@@ -179,5 +217,14 @@
         "detak_jantung_2.png",
         "detak_jantung_3.jpg"
       ]
+    },
+    {
+      "title": "Halaman Web ini 😋",
+      "tags": ["Web App"],
+      "year": 2022,
+      "content": "Web pribadi yang menampilkan profil, resume, dan portofolio. Dibuat dengan TailwindCSS, dan VueJs",
+      "hide": true,
+      "images": []
     }
+
 ]

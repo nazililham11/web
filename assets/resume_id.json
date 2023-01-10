@@ -1,0 +1,42 @@
+{
+    "education": [
+        { 
+            "institution": "SMK Negeri 1 Sidoarjo",
+            "major": "Teknik Audio Video",
+            "start_year": 2014,
+            "end_year": 2017,
+            "other_info": [
+                "Mengikuti Program PKL di JNN Malang.",
+                "Mengikuti Program Pertukaran Pelajar Dengan Muaklek Techical College, Thailand.",
+                "🏆 Juara 2 dalam event di SMK Negeri 1 Buduran 2016."
+            ]
+        },
+        {
+            "institution": "Universitas AMIKOM Yogyakarta",
+            "major": "S1 - Informatika",
+            "start_year": 2017,
+            "end_year": 2022,
+            "other_info": [
+                "Anggota Komunitas Hardware Experiment Amikom (HEXA).",
+                "🏆 Juara 2 dalam event GKM (Gelar Karya AMIKOM) 2018.",
+                "🏆 Juara 4 dalam event KIROFEST Polman Bandung 2019."
+            ]
+        }
+
+    ],
+    "work_exp": [
+        {
+            "title": "Desainer Hardware (PKL SMK)",
+            "company": "JNN Malang",
+            "start_year": 2016,
+            "other_info": ""
+        },
+        {
+            "title": "Desainer Hardware dan Programer",
+            "company": "Freelance",
+            "start_year": 2019,
+            "end_year": 2022,
+            "other_info": ""
+        }
+    ]
+}

@@ -1,10 +1,10 @@
 <template>
-    
+
     <div class="container mx-auto flex flex-col p-12 gap-2 items-center my-4">
 
         <h1 class="text-4xl uppercase tracking-widest">
-            <span class="m-0">Portofol</span>
-            <span class="m-0 bg-sky-600 text-gray-900 px-1">io</span>
+            <Label class="m-0"
+                   labels_id="portofolio__portofolio"></Label>
         </h1>
 
         <div class="flex flex-wrap justify-center gap-2 mt-4">
@@ -40,14 +40,14 @@
     </div>
 
     <div class="container mx-auto flex flex-col p-12 gap-12 
-                items-center my-4 mb-auto flex-grow">
+                items-center my-4">
 
         <div class="rounded-lg w-full p-8 gap-2 flex flex-col bg-gray-800 
                     border border-sky-600"
              v-for="_project in filtered_projects"
              :key="_project">
 
-            <div class="flex md:flex-row flex-col justify-between gap-4">
+            <div class="flex lg:flex-row flex-col justify-between gap-4">
                 <div class="flex flex-col gap-2">
                     <h1 class="text-xl font-semibold">
                         {{ _project.title }}
@@ -57,16 +57,23 @@
                     </span>
                 </div>
 
-                <div class="flex flex-col md:items-end"
+                <div class="flex flex-col lg:items-end"
                      v-if="_project.repository">
-                    <span class="text-gray-400">Halaman Repository</span>
+
                     <a :href="_project.repository"
                        target="_blank"
                        class="flex items-center mt-2 text-gray-100 text-lg">
+
                         <img alt="Github logo"
                              class="h-8 mr-2 bg-gray-100 rounded-full p-1"
                              :src="'./img/github-logo.png'">
-                        {{ repo_name(_project.repository) }}
+
+                        <div class="flex flex-col">
+                            <span class="text-gray-400 -mb-1 text-sm">
+                                <Label labels_id="portofolio__repo_page"></Label>
+                            </span>
+                            <span>{{ repo_name(_project.repository) }}</span>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -81,17 +88,16 @@
                 </span>
             </div>
 
-
             <span class="mb-2 text-gray-100"
                   v-if="_project.achievement">
                 🏆 {{ _project.achievement }}
             </span>
 
             <div class="flex gap-4 min-h-[10rem] mt-4 
-                        items-start md:flex-row flex-col">
+                        items-start lg:flex-row flex-col">
 
                 <template v-if="_project.images.length">
-                    <img class="max-h-full md:min-w-[20%] md:max-w-[30%] rounded-lg"
+                    <img class="max-h-full lg:min-w-[20%] lg:max-w-[30%] rounded-lg"
                          v-for="_img of _project.images.slice(0, 2)"
                          :key="_img"
                          :src="'./img/' + _img">
@@ -101,7 +107,7 @@
                             aspect-video justify-center bg-opacity-50 p-8 
                             text-gray-100 text-2xl font-semibold"
                      v-else>
-                    No Image
+                    <Label labels_id="no_image"></Label>
                 </div>
 
                 <span class="flex-auto h-fit text-gray-200">
@@ -115,8 +121,12 @@
 </template>
 
 <script>
-import project from './../../assets/project.json'
+import project from './../../assets/portofolio_id.json'
+import utils from './../utils/utils'
+import Label from './../components/Label.vue'
+
 export default {
+    components: { Label },
     data() {
         return {
             projects: project,
@@ -125,23 +135,20 @@ export default {
         }
     },
     methods: {
-        repo_name(url) {
-            url = url + ''
-            return url.split('/').pop()
-        },
+        repo_name: utils.repo_name,
         tags_OnClick(index) {
-            let all_active = true
-            this.tags.forEach(t => all_active = all_active && t.active)
-            if (all_active)
-                this.tags = this.tags.map(t => ({ ...t, active: false }))
+            const all_active = this.active_tags.length == this.tags.length
+            if (all_active) this.tags = this.tags.map(t => ({ ...t, active: false }))
             this.tags[index].active = !this.tags[index].active
+            const all_unactive = this.active_tags.length == 0
+            if (all_unactive) this.tags = this.tags.map(t => ({ ...t, active: true }))
         },
         years_OnClick(index) {
-            let all_active = true
-            this.years.forEach(y => all_active = all_active && y.active)
-            if (all_active)
-                this.years = this.years.map(y => ({ ...y, active: false }))
-            this.years[index].active = !this.years[index].active
+            let all_active = this.active_years.length == this.years.length
+            if (all_active) this.years = this.years.map(y => ({ ...y, active: false }))
+            this.years[index].active = !this.years[index].active            
+            let all_unactive = this.active_years == 0
+            if (all_unactive) this.years = this.years.map(y => ({ ...y, active: true }))
         }
     },
     computed: {
@@ -152,31 +159,22 @@ export default {
             return (this.years.filter(y => y.active)).map(y => y.title)
         },
         filtered_projects() {
-            let tags = this.active_tags
-            let years = this.active_years
-
-            let filter_by_tags = p => {
-                if (!Array.isArray(p.tags)) return false
-                for (let t of p.tags)
-                    if (tags.indexOf(t) > -1) return true
-                return false
-            }
-            let filter_by_years = p => {
-                return (years.indexOf(p.year + '') > -1)
-            }
-
-            let projects = this.projects.filter(filter_by_tags)
-            projects = projects.filter(filter_by_years)
-
-            return projects
+            let tags_filter = utils.filter_by_tags(this.active_tags)
+            let years_filter = utils.filter_by_years(this.active_years)
+            return this.projects.filter(tags_filter).filter(years_filter)
         }
     },
     mounted() {
+        this.projects = this.projects.filter(p => !p.hide)
+        this.projects = this.projects.sort((a, b) => b.year - a.year)
+
         const tags = {}, years = {}
+        
         this.projects.forEach(p => {
             p.tags.forEach(t => tags[t] = isNaN(tags[t]) ? 1 : tags[t] + 1)
             years[p.year] = isNaN(years[p.year]) ? 1 : years[p.year] + 1
         })
+        
         for (let key in tags)
             this.tags.push({ title: key, count: tags[key], active: true })
         for (let key in years)
