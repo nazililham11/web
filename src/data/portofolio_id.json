@@ -224,6 +224,7 @@
       "year": 2022,
       "content": "Web pribadi yang menampilkan profil, resume, dan portofolio. Dibuat dengan TailwindCSS, dan VueJs",
       "hide": true,
+      "repository": "https://github.com/nazililham11/web",
       "images": []
     }
 
