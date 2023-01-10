@@ -69,7 +69,7 @@
 </template>
 
 <script>
-import resume from './../../assets/resume_id.json'
+import resume from './../data/resume_id.json'
 import Label from './../components/Label.vue'
 
 export default {

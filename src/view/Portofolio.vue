@@ -121,7 +121,7 @@
 </template>
 
 <script>
-import project from './../../assets/portofolio_id.json'
+import project from './../data/portofolio_id.json'
 import utils from './../utils/utils'
 import Label from './../components/Label.vue'
 

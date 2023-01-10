@@ -1,4 +1,4 @@
-import labels from './../../assets/labels_id.json'
+import labels from './../data/labels_id.json'
 
 const labels_get = (id) =>{
     if (labels[id] !== undefined)
