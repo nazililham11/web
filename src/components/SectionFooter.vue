@@ -1,4 +1,10 @@
 <script setup lang="ts">
+const email_address = "me@nazililham11.my.id"
+const external_links: string[][] = [
+    ["https://github.com/nazililham11", "GitHub"],
+    ["https://linkedin.com/in/nazililham11", "Linkedin"],
+    ["mailto:" + email_address, "Email"],
+]
 </script>
 
 <template>
@@ -14,30 +20,18 @@
                 </p>
                 <a
                     class="inline-block mt-4 text-xl font-bold text-primary hover:text-[#111815] dark:hover:text-white transition-colors underline decoration-2 underline-offset-4"
-                    href="mailto:hello@nazil.dev">
-                    hello@nazil.dev
+                    :href="'mailto:' + email_address">
+                    {{email_address}}
                 </a>
             </div>
             <div class="flex flex-col gap-8 md:text-right">
                 <div class="flex flex-col gap-4">
                     <span class="text-sm font-bold uppercase tracking-widest text-gray-400">Socials</span>
                     <div class="flex flex-col md:items-end gap-2">
-                        <a
+                        <a v-for="[link, label] in external_links"
                             class="text-lg font-medium hover:text-primary transition-colors flex items-center gap-2 md:flex-row-reverse"
-                            href="#">
-                            GitHub
-                            <span class="material-symbols-outlined text-sm">north_east</span>
-                        </a>
-                        <a
-                            class="text-lg font-medium hover:text-primary transition-colors flex items-center gap-2 md:flex-row-reverse"
-                            href="#">
-                            LinkedIn
-                            <span class="material-symbols-outlined text-sm">north_east</span>
-                        </a>
-                        <a
-                            class="text-lg font-medium hover:text-primary transition-colors flex items-center gap-2 md:flex-row-reverse"
-                            href="#">
-                            Twitter
+                            :href="link">
+                            {{label}}
                             <span class="material-symbols-outlined text-sm">north_east</span>
                         </a>
                     </div>
@@ -46,10 +40,9 @@
         </div>
         <div
             class="mt-24 pt-8 border-t border-divider dark:border-divider-dark flex flex-col md:flex-row items-center justify-between text-sm text-gray-500 font-mono">
-            <p>© 2024 Nazil. All rights reserved.</p>
+            <p>© 2026 Nazil. All rights reserved.</p>
             <p>
-                Designed &amp; Built with
-                <span class="text-primary">Logic</span>
+                Built with <span class="text-primary">Vue</span>
             </p>
         </div>
     </footer>

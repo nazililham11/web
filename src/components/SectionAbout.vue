@@ -14,22 +14,27 @@
                     Creativity.
                 </h3>
             </div>
+
             <!-- Vertical Line (Desktop only) -->
-            <div class="hidden md:block md:col-span-1 flex justify-center h-full">
+            <div class="hidden md:block md:col-span-1 justify-center h-full">
                 <div class="architectural-line-vertical"></div>
             </div>
+            
             <!-- Bio Content -->
             <div class="md:col-span-8 flex flex-col gap-6">
                 <p class="text-lg md:text-xl leading-relaxed font-body text-gray-700 dark:text-gray-300">
-                    I’m a software engineer with a heavy crush on electronics and robotics. I started teaching
-                    myself to code back in 2015 and eventually turned that curiosity into a career.
+                    Hey, I'm Ilham. I’m primarily a Software Engineer focused on building clean, automated
+                    systems that solve real problems. While I spend most of my time in the terminal, I have a
+                    deep background in Hardware and Robotics, which gives me a unique perspective on how code
+                    interacts with the physical world.
                 </p>
                 <p class="text-base md:text-lg leading-relaxed font-body text-gray-600 dark:text-gray-400">
-                    I don't just write code; I bridge the gap between Software (Web & Data) and Hardware (IoT
-                    & Robots). Whether it's a data pipeline or a four-legged walking robot, I enjoy making
-                    complex systems talk to each other.
+                    My journey started in 2015 with self-taught coding, which I later backed up with an
+                    Electronics background from Vocational School and an Informatics degree from Collage. For
+                    the last 3 years, I’ve been freelancing—building everything from data pipelines to smart
+                    gadgets.
                 </p>
-                <div class="mt-8">
+                <div class="mt-8 hidden">
                     <a
                         class="inline-flex items-center gap-2 text-primary font-medium hover:gap-4 transition-all"
                         href="#">
