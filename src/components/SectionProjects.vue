@@ -34,88 +34,84 @@ const projects = [
         thumbnail: "/img/timetracker.jpg",
         tech: "Python, Vue, Tailwind, Vite"
     },
-    {
-        title: "Robot Arm Wrapper",
-        subtitle: "2016://_ Hardware / Native App Integration",
-        description:
-            "A desktop app that lets you record a series of movements and play them back on a robotic arm.",
-        thumbnail: "/img/arm_robot_app.jpg",
-        tech: "Arduino, GRBL, Visual Basic"
-    }
+    // {
+    //     title: "Robot Arm Wrapper",
+    //     subtitle: "2016://_ Hardware / Native App Integration",
+    //     description:
+    //         "A desktop app that lets you record a series of movements and play them back on a robotic arm.",
+    //     thumbnail: "/img/arm_robot_app.jpg",
+    //     tech: "Arduino, GRBL, Visual Basic"
+    // }
 ]
 </script>
 
 <template>
-    <section class="w-full py-24 md:py-32 px-6 md:px-12 max-w-[1200px] mx-auto" id="projects">
+    <section
+        class="w-full py-24 md:py-32 px-6 md:px-12 max-w-[1200px] mx-auto flex flex-col gap-12"
+        id="projects">
+        <div class="flex items-end justify-between">
+            <h2 class="text-sm font-bold tracking-widest uppercase text-primary">03. Selected Projects</h2>
+            <a
+                class="hidden text-sm font-medium border-b border-gray-300 hover:border-primary hover:text-primary transition-colors pb-1"
+                href="#">
+                View Archive
+            </a>
+        </div>
+        <!-- Projects List -->
         <div class="flex flex-col gap-12">
-            <div class="flex items-end justify-between">
-                <h2 class="text-sm font-bold tracking-widest uppercase text-primary">
-                    03. Selected Projects
-                </h2>
-                <a
-                    class="hidden text-sm font-medium border-b border-gray-300 hover:border-primary hover:text-primary transition-colors pb-1"
-                    href="#">
-                    View Archive
-                </a>
-            </div>
-            <!-- Projects List -->
-            <div class="flex flex-col">
-                <!-- Project 1 -->
+            <div
+                v-for="(project, index) in projects"
+                class="group border-b border-divider dark:border-divider-dark py-16 transition-colors relative">
+                <!-- Hover Indicator Line -->
                 <div
-                    v-for="(project, index) in projects"
-                    class="group border-b border-divider dark:border-divider-dark py-8 transition-colors relative">
-                    <!-- Hover Indicator Line -->
+                    class="absolute left-0 right-0 bottom-0 h-[1px] bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform ease-in-out origin-bottom duration-1000"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 min-h-[150px] gap-12 md:gap-8">
+                    <!-- Project Info -->
                     <div
-                        class="absolute left-0 right-0 bottom-0 h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-bottom"></div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-12 min-h-[150px]">
-                        <!-- Project Info -->
-                        <div
-                            class="col-span-1 md:col-span-6 p-8 flex flex-col justify-between"
-                            :class="{ 'order-last': index % 2 == 0 }">
-                            <div>
-                                <div class="flex items-center gap-3 mb-4">
-                                    <span class="h-px w-8 bg-primary"></span>
-                                    <span class="text-xs font-mono text-primary uppercase">
-                                        {{ project.subtitle }}
-                                    </span>
-                                </div>
-                                <h3
-                                    class="text-3xl md:text-5xl font-bold mb-6 group-hover:text-primary transition-colors">
-                                    {{ project.title }}
-                                </h3>
-                                <p class="text-slate-400 text-lg leading-relaxed mb-6">
-                                    {{ project.description }}
-                                </p>
+                        class="col-span-1 md:col-span-6 md:p-8 flex flex-col justify-between"
+                        :class="{ 'md:order-last': index % 2 == 0 }">
+                        <div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="h-px w-8 bg-primary"></span>
+                                <span class="text-xs font-mono text-primary uppercase">
+                                    {{ project.subtitle }}
+                                </span>
                             </div>
-                            <Tags :tags="project.tech" />
+                            <h3
+                                class="text-3xl md:text-5xl font-bold mb-6 group-hover:text-primary transition-colors">
+                                {{ project.title }}
+                            </h3>
+                            <p class="text-slate-400 text-lg leading-relaxed mb-6">
+                                {{ project.description }}
+                            </p>
                         </div>
+                        <Tags :tags="project.tech" />
+                    </div>
 
-                        <!-- Project Visual/Abstract -->
-                        <div class="col-span-1 md:col-span-6 relative h-64 md:h-auto overflow-hidden">
-                            <div
-                                class="absolute inset-0 bg-background-dark/50 z-10 group-hover:bg-transparent transition-colors duration-500"></div>
+                    <!-- Project Visual/Abstract -->
+                    <div
+                        class="col-span-1 md:col-span-6 relative h-64 md:h-auto md:block hidden overflow-hidden">
+                        <div class="w-full h-full aspect-[4/3]">
                             <img
-                                class="w-full aspect-[4/3] object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-transform duration-700"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-transform duration-700"
                                 :src="project.thumbnail"
                                 alt="" />
+                        </div>
 
-                            <!-- Tech Overlay -->
-                            <div class="absolute bottom-0 right-0 p-6 z-20 hidden">
-                                <a
-                                    class="h-12 w-12 bg-primary text-white flex items-center justify-center hover:bg-white hover:text-background-dark transition-colors"
-                                    href="#">
-                                    <span class="material-symbols-outlined -rotate-45">arrow_forward</span>
-                                </a>
-                            </div>
+                        <!-- Tech Overlay -->
+                        <div class="absolute bottom-0 right-0 p-6 z-20 hidden">
+                            <a
+                                class="h-12 w-12 bg-primary text-white flex items-center justify-center hover:bg-white hover:text-background-dark transition-colors"
+                                href="#">
+                                <span class="material-symbols-outlined -rotate-45">arrow_forward</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            <a class="hidden mt-4 text-sm font-medium text-primary" href="#">
-                View All Projects -&gt;
-            </a>
         </div>
+        <a class="hidden mt-4 text-sm font-medium text-primary" href="#">View All Projects -&gt;</a>
     </section>
 </template>
 

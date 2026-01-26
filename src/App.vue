@@ -19,9 +19,9 @@ import SectionFooter from "./components/SectionFooter.vue"
             <SectionHero />
             
             <!-- Divider -->
-            <div class="w-full max-w-[1200px] mx-auto px-6 md:px-12">
+            <!-- <div class="w-full max-w-[1200px] mx-auto px-6 md:px-12">
                 <div class="architectural-line"></div>
-            </div>
+            </div> -->
 
             <!-- ABOUT SECTION -->
             <SectionAbout />

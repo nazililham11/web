@@ -91,3 +91,7 @@
 .archive-table tr:hover td {
     background-color: rgba(23, 207, 145, 0.05);
 }
+
+html {
+  scroll-behavior: smooth;
+}
