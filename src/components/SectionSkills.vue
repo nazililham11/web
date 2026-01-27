@@ -23,7 +23,7 @@ const skill_subsections = [
             "I handle the full prototyping journey—designing PCBs, writing firmware, and crafting casings. I bridge the gap by ensuring your hardware integrates perfectly with web or mobile platforms.",
         tech: "C/C++, Arduino, PlatformIO, IoT Protocols, Electronic Design",
         image: "/img/pcb2.jpg",
-        image_class: "contrast-200",
+        image_class: "-contrast-200",
     }
 ]
 </script>
@@ -37,11 +37,11 @@ const skill_subsections = [
                 <!-- Card -->
                 <div v-for="subsection in skill_subsections"
                     class="group flex flex-col gap-6 p-4 rounded-lg transition-colors hover:bg-surface/50 dark:hover:bg-surface-dark/50 -ml-4">
-                    <img class="opacity-75 saturate-0 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:saturate-100 w-full bg-cover bg-center object-cover aspect-square transition-all" :src="subsection.image" alt="" :class="subsection.image_class ?? ''">
+                    <img class="opacity-75 saturate-0 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:saturate-100 w-full bg-cover bg-center object-cover aspect-video md:aspect-square transition-all" :src="subsection.image" alt="" :class="subsection.image_class ?? ''">
 
                     <div class="flex flex-col gap-3">
-                        <h3 class="text-xl font-bold">{{ subsection.title }}</h3>
-                        <p class="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed mb-6">
+                        <h3 class="text-lg md:text-xl font-bold">{{ subsection.title }}</h3>
+                        <p class="text-neutral-600 dark:text-neutral-400 text-base md:text-lg leading-relaxed mb-6">
                             {{ subsection.subtitle }}
                         </p>
                         <Tags :tags="subsection.tech" />

@@ -22,7 +22,7 @@
 
             <!-- Bio Content -->
             <div class="md:col-span-8 flex flex-col gap-6">
-                <p class="text-lg leading-relaxed font-body text-gray-700 dark:text-gray-300">
+                <p class="text-base md:text-lg leading-relaxed font-body text-gray-700 dark:text-gray-300">
                     I’ve been writing code since 2015. What started as a self-taught obsession eventually led
                     me through formal degrees in both electronics and informatics, giving me a unique
                     perspective on how digital systems work from the ground up.
@@ -36,7 +36,7 @@
                 </p>
                 <div class="mt-8 md:col-span-6">
                     <div class="mt-8 md:col-span-6">
-                        <h2 class="text-sm font-bold tracking-widest uppercase text-primary mb-4">
+                        <h2 class="text-lg md:text-xl font-bold mb-4">
                             Experience & Organizations
                         </h2>
                         <ul class="space-y-2 text-base md:text-lg leading-relaxed font-body text-gray-600 dark:text-gray-400">
@@ -46,7 +46,7 @@
                         </ul>
                     </div>
                     <div class="mt-8 md:col-span-6">
-                        <h2 class="text-sm font-bold tracking-widest uppercase text-primary mb-4">Education</h2>
+                        <h2 class="text-lg md:text-xl font-bold mb-4">Education</h2>
                         <ul class="space-y-2 text-base md:text-lg leading-relaxed font-body text-gray-600 dark:text-gray-400">
                             <li>Bachelor of Informatics — Universitas AMIKOM Yogyakarta (2023)</li>
                             <li>Electronics Engineering — SMK Negeri 1 Sidoarjo</li>

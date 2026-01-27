@@ -2,7 +2,9 @@
 
 <template>
     <section
-        class="w-full min-h-screen md:min-h-[85vh] relative flex flex-col justify-center items-center px-6 md:px-12 pt-20 mx-auto overflow-hidden">
+        class="w-full min-h-screen md:min-h-[85vh] relative flex flex-col justify-center items-center px-6 md:px-12 pt-20 mx-auto overflow-hidden"
+    id="greeting"
+        >
         <div class="max-w-4xl flex flex-col gap-6 z-10">
             <span class="font-bold text-primary tracking-widest">://_ </span>
 
@@ -20,7 +22,7 @@
                 <span class="stroke">udin</span>
             </h1>
             <h1
-            class="text-6xl md:text-7xl lg:text-7xl font-bold leading-[0.75] tracking-tight text-white">
+            class="text-5xl md:text-7xl lg:text-7xl font-bold leading-[0.75] tracking-tight text-white">
             Hi, Im Ilham.
         </h1>
 

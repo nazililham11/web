@@ -12,7 +12,7 @@ const projects = [
     },
     {
         title: "AI-Powered Cashier",
-        subtitle: "2021://_ Python / ML / Web Itegrations",
+        subtitle: "2021://_ Python / ML Computer Vision / Web Itegrations",
         description:
             'A concept of "smart" cashier system that uses Machine Learning to recognize products instantly without scannig barcodes.',
         thumbnail: "/img/deteksi_produk.jpg",
@@ -73,16 +73,13 @@ const projects = [
                         :class="{ 'md:order-last': index % 2 == 0 }">
                         <div>
                             <div class="flex items-center gap-3 mb-4">
-                                <span class="h-px w-8 bg-primary"></span>
-                                <span class="text-xs font-mono text-primary uppercase">
-                                    {{ project.subtitle }}
-                                </span>
+                                <span class="text-xs font-mono uppercase">{{ project.subtitle }}</span>
                             </div>
                             <h3
                                 class="text-3xl md:text-5xl font-bold mb-6 group-hover:text-primary transition-colors">
                                 {{ project.title }}
                             </h3>
-                            <p class="text-slate-400 text-lg leading-relaxed mb-6">
+                            <p class="text-slate-400 text-base md:text-lg leading-relaxed mb-6">
                                 {{ project.description }}
                             </p>
                         </div>
@@ -91,8 +88,8 @@ const projects = [
 
                     <!-- Project Visual/Abstract -->
                     <div
-                        class="col-span-1 md:col-span-6 relative h-64 md:h-auto md:block hidden overflow-hidden">
-                        <div class="w-full h-full aspect-[4/3]">
+                        class="col-span-1 md:col-span-6 relative h-64 md:h-auto overflow-hidden">
+                        <div class="w-full h-full aspec-video md:aspect-[4/3]">
                             <img
                                 class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-transform duration-700"
                                 :src="project.thumbnail"
